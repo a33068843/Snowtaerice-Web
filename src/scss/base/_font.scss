@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'GenSenRounded';
+  src: url(../font/GenSenRoundedTW-EL.ttf) format("truetype");
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'GenSenRounded';
+  src: url(../font/GenSenRoundedTW-L.ttf) format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'GenSenRounded';
+  src: url(../font/GenSenRoundedTW-R.ttf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'GenSenRounded';
+  src: url(../font/GenSenRoundedTW-M.ttf) format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'GenSenRounded';
+  src: url(../font/GenSenRoundedTW-B.ttf) format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'GenSenRounded';
+  src: url(../font/GenSenRoundedTW-H.ttf) format("truetype");
+  font-weight: 700;
+}
+
+// 字體的全域設定
+body {
+  font-family: 'GenSenRounded', sans-serif !important;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}

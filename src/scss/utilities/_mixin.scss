@@ -1,0 +1,23 @@
+@mixin size($media) {
+  @if $media == desktopM {
+    @media (max-width: #{$media-desktop-M}) { @content; }
+  }
+  @if $media == desktopS {
+    @media (max-width: #{$media-desktop-S}) { @content; }
+  }
+  @if $media == padL {
+    @media (max-width: #{$media-pad-L}) { @content; }
+  }
+  @if $media == padM {
+    @media (max-width: #{$media-pad-M}) { @content; }
+  }
+  @if $media == padS {
+    @media (max-width: #{$media-pad-S}) { @content; }
+  }
+  @if $media == phone {
+    @media (max-width: #{$media-phone}) { @content; }
+  }
+  @if $media == phoneM {
+    @media (max-width: #{$media-phone-M}) { @content; }
+  }
+}
