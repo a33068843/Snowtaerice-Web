@@ -1,0 +1,98 @@
+.menu {
+  width: 100%;
+  position: fixed;
+  background-color: $primary-dark;
+  z-index: 3;
+  &_container {
+    max-width: 1440px;
+    width: 100%;
+    height: $header-height;
+    padding: 12px 40px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &_logo_wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .logo {
+      width: 48px;
+      background: url(../images/logo.png) no-repeat center / contain;
+      &:before {
+        content: '';
+        display: block;
+        padding-bottom: #{1 * 100%};
+      }
+    }
+    .text {
+      font-family: 'Quicksand';
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 15px;
+      position: relative;
+      top: 2px;
+    }
+  }
+  &_items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .menu_item {
+      color: rgba($white, 0.7);
+      padding: 10px 20px;
+      position: relative;
+      top: 4px;
+      &:hover {
+        .text {
+          &:before {
+            width: 100%;
+          }
+          &:after {
+            max-width: 100%;
+          }
+        }
+      }
+      .text {
+        font-family: 'Open Huninn';
+        font-weight: 400;
+        position: relative;
+        &:before {
+          width: 0%;
+          height: 3px;
+          display: block;
+          content: '';
+          position: absolute;
+          bottom: -8px;
+          background-color: $primary200-blue;
+          transition: .3s ease;
+        }
+        &:after {
+          left: 0;
+          top: 0;
+          position: absolute;
+          content: attr(data-hover);
+          color: $white;
+          white-space: nowrap;
+          max-width: 0%;
+          overflow: hidden;
+          transition: .3s ease;
+        }
+      }
+      &.active {
+        .text:before,
+        .text:after {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  &.onScroll {
+    background-color: rgba($primary-dark, 0.9);
+    // background-color: rgba($white, 0.05);
+    border-bottom: 1px solid rgba($white, 0.1);
+    backdrop-filter: blur(5px);
+  }
+}

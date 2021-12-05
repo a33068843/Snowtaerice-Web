@@ -29,9 +29,30 @@
   font-weight: 700;
 }
 
+// 粉圓體
+@font-face {
+  font-family: 'Open Huninn';
+  src: url(../font/jf-openhuninn.ttf) format("woff"),
+    url(../font/jf-openhuninn.ttf) format("truetype"),
+    url(../font/jf-openhuninn.ttf) format("embedded-opentype");
+}
+
+// 假粉圓體
+// @font-face {
+//   font-family: 'FakePearl-Regular';
+//   src: url(https://cdn.jsdelivr.net/gh/max32002/FakePearl@1.1/webfont/FakePearl-Regular.woff2) format("woff2"),
+//     url(https://cdn.jsdelivr.net/gh/max32002/FakePearl@1.1/webfont/FakePearl-Regular.woff) format("woff");
+// }
+
+// Google 思源圓體
+// @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+
 // 字體的全域設定
 body {
-  font-family: 'GenSenRounded', sans-serif !important;
+  color: white;
+}
+.text {
+  font-family: 'GenSenRounded', 'Open Huninn', 'Noto Sans TC', 'Quicksand', 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
