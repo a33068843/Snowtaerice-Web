@@ -1,11 +1,11 @@
-mixin header()
+mixin header(activePage)
   header.menu.onScroll
     .menu_container
-      a.menu_logo_wrapper
+      a.menu_logo_wrapper(href='./')
         .logo
         .text Snow<br>Water<br>Rice
       .menu_items
+        a.menu_item(href='./portfolio.html' class=activePage === '作品集' ? 'active' : "")
+          .text(data-hover='作品集') 作品集
         a.menu_item
-          .text(data-hover="作品集") 作品集
-        a.menu_item
-          .text(data-hover="About") About
+          .text(data-hover='About') About

@@ -1,5 +1,7 @@
 include _header.pug
 include _footer.pug
+block variables
+	- var activePage = ""
 
 <!DOCTYPE html>
 html(lang="en")
@@ -23,7 +25,7 @@ html(lang="en")
 		//- 其餘自定義的 CSS 可以更新在這裡
 		block css
 	body
-		+header()
+		+header(activePage)
 		block content
 		+footer()
 		//- 引用 JS
