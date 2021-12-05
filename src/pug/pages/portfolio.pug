@@ -1,0 +1,36 @@
+extends ../base/_base.pug
+
+block append variables
+  - var activePage = "作品集"
+
+block append css
+  //- link(href="../css/home.css", rel="stylesheet")
+
+block append js
+  //- script(src="../js/home.js" type="text/javascript")
+
+block content
+  .content.portfolioPage
+    section.portfolio
+      .portfolio_container
+        .portfolio_leftWrapper
+          .subtitle Portfolio
+          .title 作品集
+          .divideWrapper
+            .shortLine
+            i.fas.fa-chevron-down
+            .shortLine
+          .text 不知道該打些甚麼好，總而言之這裡是放一些成品的地方 OuO。
+          .buttonWrapper
+            a.button.github
+              .button_front
+                i.fab.fa-github
+              .button_back Github
+            a.button.github
+              .button_front
+                i.fab.fa-github
+              .button_back Github
+            //- .button
+            //-   .button_back 不知道要放什麼OuO
+        //- .portfolio_rightWrapper 131313133
+    section.information

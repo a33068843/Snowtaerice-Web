@@ -13,7 +13,8 @@
 @import "base/_header.scss";
 
 // 元件頁樣式
-// @import "components";
+@import "components/_keyframes.scss";
 
 // 頁面樣式
-// @import "pages;
+@import "pages/_index.scss";
+@import "pages/_portfolio.scss";

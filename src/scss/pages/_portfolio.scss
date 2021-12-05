@@ -1,0 +1,116 @@
+.portfolioPage {
+  .portfolio {
+    height: 800px;
+    background-color: $primary-blue;
+    &_container {
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 80px 120px;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+    }
+    &_leftWrapper {
+      color: $white;
+
+      .subtitle {
+        font-family: 'Poppins';
+        font-size: 60px;
+        font-weight: 400;
+        text-shadow: 4px 6px 2px rgba($black, 0.2);
+        position: relative;
+        left: 8px;
+      }
+      .title {
+        font-size: 120px;
+        font-weight: 700;
+        margin-top: 20px;
+        text-shadow: 6px 10px 2px rgba($black, 0.2);
+      }
+      .divideWrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        color: rgba($white, 0.95);
+        margin: 40px 0 20px;
+        .shortLine {
+          width: 16%;
+          height: 3px;
+          border-bottom: 1px solid rgba($white, 0.95);
+        }
+        i {
+          animation: down 1s linear infinite;
+        }
+      }
+      .text {
+        font-family: 'Open Huninn';
+        font-size: 16px;
+      }
+      .buttonWrapper {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+
+        .button {
+          display: flex;
+          // 用 justify-content 的話物件會有點偏移
+          // justify-content: center;
+          align-items: center;
+          transition: .5s;
+          transform-style: preserve-3d;
+          perspective: 1000px;
+          position: relative;
+          max-width: 180px;
+          width: 100%;
+          height: 40px;
+          box-shadow: 2px 2px 4px rgba($black, 0.4);
+          &:hover {
+            transform: rotateX(180deg);
+          }
+          &_front,
+          &_back {
+            position: absolute;
+            backface-visibility: hidden;
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+          }
+          &_front {
+            font-size: 24px;
+          }
+          &_back {
+            transform: rotateX(180deg);
+          }
+          &.github {
+            // background-color: $primary-dark;
+            background: linear-gradient(135deg, rgba(53,53,53,1) 0%, rgba(37,37,37,1) 100%);
+            font-family: 'Poppins';
+            font-weight: 300;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
+    &_rightWrapper {
+      width: 200px;
+      height: 400px;
+      background-color: rgba($white, 0.1);
+      border: 1px solid rgba($white, 0.1);
+      backdrop-filter: blur(2px);
+      transform: rotateX(60deg) scale(0.7);
+      perspective: 900px;
+      transition: 0.5s ease-in-out;
+      &:hover {
+        transform: rotateX(0) scale(1) ;
+      }
+    }
+  }
+  .information {
+    height: 800px;
+    background-color: $white;
+  }
+}
