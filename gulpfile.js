@@ -29,7 +29,7 @@ gulp.task('browserSync', () => {
 
 gulp.task('pug', (done) => {
   gulp
-    .src('src/**/[^_]*.pug')
+    .src('src/pug/**/[^_]*.pug')
     .pipe(plumber())
     .pipe(
       pug({
