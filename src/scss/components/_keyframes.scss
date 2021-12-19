@@ -44,10 +44,17 @@
   }
 }
 @keyframes horizontalShake {
-  0% {
-    transform: translate(-50%, -50%) translateX(40px);
-  }
-  100% {
-    transform: translate(-50%, -50%) translateX(45px);
-  }
+  0%   { transform: translate(-50%, -50%) translateX(0px); }
+  100% { transform: translate(-50%, -50%) translateX(5px); }
+}
+@keyframes bounce {
+  0%   { transform: scale(1,1)      translateY(0); }
+  10%  { transform: scale(1.1,.9)   translateY(0); }
+  30%  { transform: scale(.9,1.1)   translateY(-10px); }
+  50%  { transform: scale(1.05,.95) translateY(0); }
+  // 57%  { transform: scale(1,1)      translateY(-1px); }
+  // 54% { transform: scale(1,1)      translateY(0); }
+  // 64%  { transform: scale(1.1,.9)   translateY(1px); }
+  84%  { transform: scale(.95,1.05) translateY(0px); }
+  100% { transform: scale(1,1)      translateY(0); }
 }

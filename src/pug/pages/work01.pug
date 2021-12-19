@@ -1,0 +1,47 @@
+extends ../base/_base.pug
+
+block append variables
+  - var activePage = "作品集"
+
+block append css
+  //- link(href="../css/home.css", rel="stylesheet")
+
+block append js
+  //- script(src="../js/home.js" type="text/javascript")
+
+block content
+  .content.workPage
+    section.inspiration
+      .inspiration_container
+        .buttonWrapper
+            a.slideButton(href='./inspiration.html')
+              i.fas.fa-caret-left
+        .title Post Cards
+    section.work
+      .work_hero
+        .circle1
+        .circle2
+      .work_container
+        .work_box
+          .work_title
+            .dotWrapper
+              i.fas.fa-circle
+              i.fas.fa-circle
+              i.fas.fa-circle
+          .work_content
+            iframe(height='600' style='width: 100%;' scrolling='no' title='Button #1' src='https://codepen.io/mnqkmxbc/embed/RwLNXOm?default-tab=&theme-id=dark' frameborder='no' loading='lazy' allowtransparency='true' allowfullscreen='true')
+              //- a(href='https://codepen.io/mnqkmxbc/pen/RwLNXOm')
+              //- a(href='https://codepen.io/mnqkmxbc')
+              //- a(href='https://codepen.io')
+            .work_linkButton
+              .buttonWrapper
+                a.button.link
+                  .button_front
+                    i.fas.fa-external-link-square-alt
+                    .text Link
+                  .button_back Codepen
+                a.button.author
+                  .button_front
+                    i.fas.fa-user-circle
+                    .text Author
+                  .button_back Name

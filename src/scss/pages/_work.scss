@@ -1,0 +1,145 @@
+.workPage {
+  .inspiration {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+
+    &_container {
+      max-width: 1440px;
+      padding: 10px 30px;
+      color: $primary-dark;
+      align-items: center;
+
+      &:after {
+        content: '';
+        flex: 0 1 120px;
+      }
+      .title {
+        position: relative;
+        top: 2px;
+        font-size: 40px;
+        font-weight: 600;
+        margin-top: 0;
+        text-shadow: 3px 5px 1px rgba($black, 0.1);
+      }
+      .buttonWrapper {
+        margin-top: 0;
+
+        .slideButton {
+          color: $primary-dark;
+          max-width: 300px;
+          width: 100%;
+          padding: 0 40px;
+          &:hover {
+            &:before {
+              transform: translateX(10px);
+            }
+          }
+          &:before {
+            content: '回列表';
+          }
+          i {
+            left: calc(50% - 35px);
+          }
+        }
+      }
+    }
+  }
+  .work {
+    &_hero {
+      position: absolute;
+      max-width: 1440px;
+      width: 100%;
+      left: 50%;
+      transform: translate(-50%, 0px);
+
+      // XXX: 為了不擋到卡片物件
+      z-index: -1;
+
+      &::before {
+        content: '';
+        display: block;
+        padding-bottom: #{math.div(800, 1440) * 100%} ;
+      }
+      .circle1 {
+        background: linear-gradient(135deg, rgba(241,39,17,1) 0%, rgba(245,175,25,1) 100%);        position: absolute;
+        width: #{math.div(526, 1440) * 100%};
+        top: #{math.div(250, 400) * 100%};
+        left: #{math.div(-250, 1440) * 100%};
+        border-radius: 100%;
+        &::before {
+          content: '';
+          display: block;
+          padding-top: #{math.div(1, 1) * 100%};
+        }
+      }
+      .circle2 {
+        background: linear-gradient(315deg, rgba(28,181,224,1) 0%, rgba(0,0,70,1) 100%);
+        position: absolute;
+        width: #{math.div(600, 1440) * 100%};
+        top: #{math.div(30, 400) * 100%};
+        left: #{math.div(1100, 1440) * 100%};
+        border-radius: 100%;
+        &::before {
+          content: '';
+          display: block;
+          padding-top: #{math.div(1, 1) * 100%};
+        }
+      }
+    }
+    &_container {
+      max-width: 1440px;
+      width: 100%;
+      margin: 100px auto 0px;
+      padding: 0 30px;
+
+      .work_box {
+        // padding: 40px 40px 20px;
+        background-color: rgba($white, 0.1);
+        border: 1px solid rgba($white, 0.2);
+        border-radius: 20px;
+
+        .work_title {
+          height: 30px;
+          background-color: rgba($white, 0.1);
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+
+          .dotWrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            top: 1px;
+
+            i {
+              font-size: 12px;
+              animation: bounce 1.5s cubic-bezier(0.280, 0.840, 0.420, 1) infinite normal;
+              &:nth-child(2) {
+                animation-delay: 200ms;
+              }
+              &:nth-child(3) {
+                animation-delay: 400ms;
+              }
+            }
+          }
+        }
+        .work_content {
+          padding: 0 0 20px;
+        }
+        .work_linkButton {
+          margin: 0 auto;
+
+          .buttonWrapper {
+            margin-top: 20px;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
