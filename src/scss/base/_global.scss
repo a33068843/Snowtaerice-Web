@@ -200,6 +200,9 @@ a, a:hover, a:visited, a:active {
             // transform: translate(-2px, -2px) rotate(-0.2deg);
             transform: translate(-2px, -2px);
             box-shadow: 16px 16px 10px rgba($black, 0.2);
+            .hover {
+              display: none;
+            }
           }
         }
         .card_topWrapper {
@@ -207,6 +210,14 @@ a, a:hover, a:visited, a:active {
           background-color: rgba($white, 0.1);
           border-top-left-radius: 20px;
           border-top-right-radius: 20px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            &.hover {
+              filter: contrast(80%);
+            }
+          }
         }
         .card_bottomWrapper {
           height: 100px;
@@ -437,4 +448,7 @@ a, a:hover, a:visited, a:active {
       }
     }
   }
+}
+.displayNone {
+  display: none;
 }

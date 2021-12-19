@@ -1,0 +1,206 @@
+.work2 {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  &_hero {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      display: block;
+      background-color: $white;
+      padding-bottom: #{math.div(1200, 1600) * 100%};
+    }
+    .leftBox {
+      background-color: #E5E5E5;
+      width: 100%;
+      .circle1 {
+        border: 1px solid rgba(#3C3C43, 0.3);
+        border-radius: 100%;
+        position: absolute;
+        width: #{math.div(1658, 1600) * 100%};
+        left: #{math.div(260, 1600) * 100%};
+        top: #{math.div(-587, 1200) * 100%};
+        &:before {
+          content: '';
+          display: block;
+          padding-bottom: #{100%};
+        }
+      }
+      .circle2 {
+        border: 1px solid rgba(#3C3C43, 0.3);
+        border-radius: 100%;
+        position: absolute;
+        width: #{math.div(1679, 1600) * 100%};
+        left: #{math.div(-789, 1600) * 100%};
+        top: #{math.div(480, 1200) * 100%};
+        &:before {
+          content: '';
+          display: block;
+          padding-bottom: #{100%};
+        }
+      }
+      .circle3 {
+        background-color: $white;
+        border: 1px solid rgba($white, 0.4);
+        border-radius: 100%;
+        box-shadow: -20px 94px 144px rgba(#807D7D, 0.16), inset 0px 4px 14px rgba($white, 0.25);
+        position: absolute;
+        width: #{math.div(43, 1600) * 100%};
+        left: #{math.div(820, 1600) * 100%};
+        top: #{math.div(1015, 1200) * 100%};
+        &:before {
+          content: '';
+          display: block;
+          padding-bottom: #{100%};
+        }
+      }
+      .circle4 {
+        background-color: rgba($white, 0.6);
+        border: 1px solid rgba($white, 0.4);
+        border-radius: 100%;
+        box-shadow: -20px 94px 144px rgba(#807D7D, 0.16), inset 0px 4px 14px rgba($white, 0.25);
+        backdrop-filter: blur(6px);
+        position: absolute;
+        width: #{math.div(464, 1600) * 100%};
+        left: #{math.div(-34, 1600) * 100%};
+        top: #{math.div(-197, 1200) * 100%};
+        &:before {
+          content: '';
+          display: block;
+          padding-bottom: #{100%};
+        }
+      }
+      .figma {
+        background: url(../images/Data/work2_figma.svg) no-repeat center / contain;
+        width: #{math.div(169, 1600) * 100%};
+        position: absolute;
+        left: #{math.div(100, 1600) * 100%};
+        top: #{math.div(682, 1200) * 100%};
+        &::before {
+          content: '';
+          display: block;
+          padding-bottom: #{math.div(258, 169) * 100%};
+        }
+      }
+      .titleText {
+        background: url(../images/Data/work2_title.svg) no-repeat center / contain;
+        position: absolute;
+        width: #{math.div(335, 1600) * 100%};
+        left: #{math.div(100, 1600) * 100%};
+        top: #{math.div(972, 1200) * 100%};
+        &::before {
+          content: '';
+          display: block;
+          padding-bottom: #{math.div(82, 335) * 100%};
+        }
+      }
+      .subtitleText {
+        background: url(../images/Data/work2_subtitle.svg) no-repeat center / contain;
+        position: absolute;
+        width: #{math.div(632, 1600) * 100%};
+        left: #{math.div(100, 1600) * 100%};
+        top: #{math.div(1062, 1200) * 100%};
+        &::before {
+          content: '';
+          display: block;
+          padding-bottom: #{math.div(38, 632) * 100%};
+        }
+      }
+    }
+    .rightBox {
+      background: url(https://i.imgur.com/8vwAlx2.png) no-repeat center / contain;
+      position: absolute;
+      width: #{math.div(537, 1600) * 100%};
+      left: #{math.div(1065, 1600) * 100%};
+      top: 0;
+      &:before {
+        content: '';
+        display: block;
+        padding-bottom: #{math.div(1200, 535) * 100%};
+      }
+      .triangle {
+        background-color: rgba($white, 0.6);
+        border: 1px solid rgba($white, 0.4);
+        border-radius: 40px;
+        box-shadow: inset 0px 4px 4px rgba($white, 0.25);
+        backdrop-filter: blur(20px);
+        transform: rotate(-49deg);
+        position: absolute;
+        width: #{math.div(180, 535) * 100%};
+        left: #{math.div(405, 535) * 100%};
+        top: #{math.div(-40, 1200) * 100%};
+        &:before {
+          content: '';
+          display: block;
+          padding-bottom: #{100%};
+        }
+      }
+      .circle1 {
+        background-color: rgba($white, 0.6);
+        border: 1px solid rgba($white, 0.4);
+        border-radius: 100%;
+        box-shadow: inset 0px 4px 4px rgba($white, 0.25);
+        backdrop-filter: blur(20px);
+        position: absolute;
+        width: #{math.div(302, 535) * 100%};
+        left: #{math.div(339, 535) * 100%};
+        top: #{math.div(1037, 1200) * 100%};
+        &:before {
+          content: '';
+          display: block;
+          padding-bottom: #{100%};
+        }
+      }
+    }
+    .card1 {
+      background: url(../images/Data/work2_card.svg) no-repeat center / contain;
+      box-shadow: inset -20px 94px 144px rgba(#807D7D, 0.16);
+      border-radius: 40px;
+      transform: rotate(17deg);
+      backdrop-filter: blur(10px);
+      width: #{math.div(850, 1600) * 100%};
+      position: absolute;
+      left: #{math.div(390, 1600) * 100%};
+      top: #{math.div(244, 1200) * 100%};
+      &::before {
+        content: '';
+        display: block;
+        padding-bottom: #{math.div(530, 850) * 100%};
+      }
+    }
+    .card2 {
+      background: url(../images/Data/work2_card.svg) no-repeat center / contain;
+      box-shadow: inset -20px 94px 144px rgba(#807D7D, 0.16);
+      border-radius: 40px;
+      transform: rotate(-15deg);
+      width: #{math.div(765, 1600) * 100%};
+      position: absolute;
+      left: #{math.div(592, 1600) * 100%};
+      top: #{math.div(357, 1200) * 100%};
+      &::before {
+        content: '';
+        display: block;
+        padding-bottom: #{math.div(477, 765) * 100%};
+      }
+    }
+    .card3 {
+      background: url(../images/Data/work2_card.svg) no-repeat center / contain;
+      box-shadow: inset -20px 94px 144px rgba(#807D7D, 0.16);
+      border-radius: 40px;
+      transform: rotate(135deg);
+      width: #{math.div(650, 1600) * 100%};
+      position: absolute;
+      left: #{math.div(1120, 1600) * 100%};
+      top: #{math.div(400, 1200) * 100%};
+      &::before {
+        content: '';
+        display: block;
+        padding-bottom: #{math.div(405, 650) * 100%};
+      }
+    }
+  }
+}

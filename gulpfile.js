@@ -60,7 +60,7 @@ gulp.task('script', (done) => {
     .src('src/**/[^_]*.js')
     .pipe(plumber())
     .pipe(rename({dirname: ''}))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest('./www/js'))
     .pipe(browserSync.reload( {stream: true} ))
   done();
@@ -68,11 +68,11 @@ gulp.task('script', (done) => {
 
 gulp.task('images', (done) => {
   gulp
-    .src('src/images/*')
+    .src('src/images/**/*')
     .pipe(plumber())
     .pipe(changed('./www/images'))
-    .pipe(rename({dirname: ''}))
-    .pipe(imagemin())
+    // .pipe(rename({dirname: ''}))
+    // .pipe(imagemin())
     .pipe(gulp.dest('./www/images'))
     .pipe(browserSync.reload( {stream: true} ))
   done();

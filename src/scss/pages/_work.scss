@@ -98,6 +98,8 @@
         background-color: rgba($white, 0.1);
         border: 1px solid rgba($white, 0.2);
         border-radius: 20px;
+        backdrop-filter: blur(20px);
+        margin-bottom: 40px;
 
         .work_title {
           height: 30px;
@@ -125,6 +127,17 @@
               &:nth-child(3) {
                 animation-delay: 400ms;
               }
+            }
+          }
+        }
+        .overlay {
+          height: 400px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .sk-fold-cube {
+            &::before {
+              background-color: $white;
             }
           }
         }
