@@ -1,5 +1,6 @@
 body {
   background-color: $background;
+  overflow-x: hidden;
 }
 a, a:hover, a:visited, a:active {
   color: inherit;
@@ -14,4 +15,426 @@ a, a:hover, a:visited, a:active {
 }
 .content {
   padding-top: 72px;
+
+  .inspiration {
+    background-color: $primary-yellow;
+    &_container {
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 80px 120px 80px 60px;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      justify-content: space-between;
+    }
+    &_leftWrapper {
+      width: 600px;
+      margin: auto 0;
+      .inspiration_hero {
+        position: relative;
+        transform-style: preserve-3d;
+        &:before {
+          content: '';
+          display: block;
+          padding-top: #{math.div(400, 600) * 100%};
+        }
+        .creeper {
+          position: absolute;
+          width: #{math.div(540, 600) * 100%};
+          top: #{math.div(-70, 400) * 100%};
+          left: #{math.div(-50, 600) * 100%};
+          background: url(../images/inspiration_creeper.png) no-repeat center / contain;
+          animation: wave 1s ease-in-out infinite alternate;
+          &:before {
+            content: '';
+            display: block;
+            padding-bottom: #{1 * 100%};
+          }
+        }
+        .note {
+          position: absolute;
+          width: #{math.div(100, 600) * 100%};
+          top: #{math.div(160, 400) * 100%};
+          left: #{math.div(620, 600) * 100%};
+          background: url(../images/inspiration_note.png) no-repeat center / contain;
+          animation: wave 1s 200ms ease-in-out infinite alternate;
+          &:before {
+            content: '';
+            display: block;
+            padding-bottom: #{1 * 100%};
+          }
+        }
+        .sounder {
+          position: absolute;
+          width: #{math.div(150, 600) * 100%};
+          top: #{math.div(280, 400) * 100%};
+          left: #{math.div(500, 600) * 100%};
+          background: url(../images/inspiration_sounder.png) no-repeat center / contain;
+          animation: waveRotate 1s 400ms ease-in-out infinite alternate;
+          &:before {
+            content: '';
+            display: block;
+            padding-bottom: #{1 * 100%};
+          }
+        }
+      }
+      .button {
+        color: $primary-dark;
+        padding: 10px 20px;
+        background-color: rgba($black, 0.2);
+        border: 1px solid rgba($white, 0.5);
+        position: relative;
+        &:hover {
+          &:before {
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+          }
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          top: -1px;
+          left: -1px;
+          width: 0;
+          height: 0;
+          opacity: 0;
+          border-top: 1px solid $black;
+          border-left: 1px solid $black;
+          transition: .3s ease;
+        }
+      }
+    }
+    &_rightWrapper {
+      color: $primary-dark;
+      text-align: right;
+      flex-shrink: 0;
+      .subtitle {
+        left: auto;
+        right: 4px;
+      }
+      .divideWrapper {
+        color: $primary-dark;
+        justify-content: flex-end;
+        .shortLine {
+          border-bottom-color: rgba($primary-dark, 0.95);
+        }
+      }
+      .text {
+        font-weight: 600;
+      }
+      .buttonWrapper {
+        justify-content: flex-end;
+      }
+    }
+  }
+  .listCards {
+    position: relative;
+    // background: radial-gradient(circle, rgba(53,53,53,1) 0%, rgba(22,22,22,1) 100%);
+    z-index: 0;
+    &_hero {
+      position: absolute;
+      max-width: 1440px;
+      width: 100%;
+      left: 50%;
+      transform: translate(-50%, 0px);
+
+      // XXX: 為了不擋到卡片物件
+      z-index: -1;
+
+      &::before {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+      }
+      .circle1 {
+        background: linear-gradient(135deg, rgba(18,194,233,1) 0%, rgba(196,113,237,1) 65%, rgba(251,75,86,1) 100%);
+        position: absolute;
+        width: #{math.div(526, 1440) * 100%};
+        top: #{math.div(30, 400) * 100%};
+        left: #{math.div(-160, 1440) * 100%};
+        border-radius: 100%;
+        &::before {
+          content: '';
+          display: block;
+          padding-top: #{math.div(1, 1) * 100%};
+        }
+      }
+      .circle2 {
+        background: linear-gradient(135deg, rgba(21,101,192,1) 0%, rgba(110,46,191,1) 100%);
+        position: absolute;
+        width: #{math.div(714, 1440) * 100%};
+        top: #{math.div(250, 400) * 100%};
+        left: #{math.div(880, 1440) * 100%};
+        border-radius: 100%;
+        &::before {
+          content: '';
+          display: block;
+          padding-top: #{math.div(1, 1) * 100%};
+        }
+      }
+    }
+    &_container {
+      max-width: 1440px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 240px 120px 160px;
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 350px);
+        justify-content: center;
+        gap: 40px;
+        .card {
+          width: 350px;
+          height: 350px;
+          background-color: rgba($white, 0.1);
+          border: 1px solid rgba($white, 0.2);
+          border-radius: 20px;
+          backdrop-filter: blur(20px);
+          box-shadow: 5px 5px 2px rgba($black, 0.05);
+          transition: .3s;
+          &:hover {
+            // 因為文字會糊掉暫時先拿除旋轉
+            // transform: translate(-2px, -2px) rotate(-0.2deg);
+            transform: translate(-2px, -2px);
+            box-shadow: 16px 16px 10px rgba($black, 0.2);
+          }
+        }
+        .card_topWrapper {
+          height: 250px;
+          background-color: rgba($white, 0.1);
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+        }
+        .card_bottomWrapper {
+          height: 100px;
+          font-family: 'Poppins';
+          padding: 10px 14px 10px 20px;
+          display: flex;
+          flex-direction: column;
+
+          .rowWrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 10px;
+
+            .dateWrapper {
+              font-weight: 100;
+              line-height: 20px;
+              display: flex;
+              flex-direction: row;
+              gap: 6px;
+            }
+            .categoryWrapper {
+              font-family: 'QuickSand';
+              font-weight: 300;
+              font-size: 16px;
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              justify-content: flex-end;
+              gap: 4px;
+
+              .category {
+                background-color: rgba($white, 0.3);
+                padding: 2px 12px;
+                line-height: auto;
+                border-radius: 10px;
+              }
+              .blue {
+                background-color: rgba($primary600-blue, 0.5);
+              }
+              .red {
+                background-color: rgba($primary-red, 0.5);
+              }
+            }
+          }
+          .textTitle {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 28px;
+          }
+          .textWrapper {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+            margin-top: auto;
+            .byAuthor {
+              font-family: 'Poppins';
+              font-size: 14px;
+              font-weight: 300;
+              line-height: 20px;
+              color: rgba($white, 0.7);
+              &::after {
+                content: 'by';
+              }
+            }
+            .author {
+              font-family: 'Poppins';
+              font-size: 16px;
+              font-weight: 300;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .subtitle {
+    font-family: 'Poppins';
+    font-size: 60px;
+    font-weight: 400;
+    text-shadow: 4px 6px 2px rgba($black, 0.2);
+    position: relative;
+    left: 8px;
+  }
+  .title {
+    font-family: 'GenSenRounded';
+    font-size: 120px;
+    font-weight: 700;
+    margin-top: 20px;
+    text-shadow: 6px 10px 2px rgba($black, 0.2);
+  }
+  .divideWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: rgba($white, 0.95);
+    margin: 40px 0 20px;
+    .shortLine {
+      width: 16%;
+      height: 3px;
+      border-bottom: 1px solid rgba($white, 0.95);
+    }
+    i {
+      animation: down 1s linear infinite;
+    }
+  }
+  .text {
+    font-family: 'Open Huninn';
+    font-size: 16px;
+  }
+  .buttonWrapper {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+
+    .button {
+      display: flex;
+      // 用 justify-content 的話物件會有點偏移
+      // justify-content: center;
+      align-items: center;
+      transition: .5s;
+      transform-style: preserve-3d;
+      perspective: 1000px;
+      position: relative;
+      max-width: 180px;
+      width: 100%;
+      height: 40px;
+      border-radius: 2px;
+      box-shadow: 2px 2px 4px rgba($black, 0.4);
+      &:hover {
+        transform: rotateX(180deg);
+      }
+      &_front,
+      &_back {
+        position: absolute;
+        backface-visibility: hidden;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        transform: rotateX(0);
+      }
+      &_front {
+        font-size: 24px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        .text {
+          font-size: 16px;
+          font-family: 'Poppins';
+          font-weight: 300;
+          letter-spacing: 1px;
+        }
+      }
+      &_back {
+        transform: rotateX(180deg);
+      }
+      &.github {
+        background: linear-gradient(135deg, rgba(53,53,53,1) 0%, rgba(37,37,37,1) 100%);
+        font-family: 'Poppins';
+        font-weight: 300;
+        letter-spacing: 1px;
+      }
+      &.author {
+        background-color: rgba($white, 0.1);
+        // border: 1px solid rgba($white, 0.2);
+        font-family: 'Poppins';
+        font-weight: 300;
+        letter-spacing: 1px;
+      }
+      &.link {
+        background-image: linear-gradient(135deg, #00c6fb 0%, #005bea 100%);        // background: linear-gradient(135deg, rgba(137,247,254,0.8) 0%, rgba(102,166,255,0.8) 100%);
+        // border: 1px solid rgba(102,166,255,1);
+        font-family: 'Poppins';
+        font-weight: 300;
+        letter-spacing: 1px;
+        i {
+          font-size: 20px;
+        }
+      }
+    }
+    .slideButton {
+      display: flex;
+      // 用 justify-content 的話物件會有點偏移
+      // justify-content: center;
+      align-items: center;
+      transition: .5s;
+      position: relative;
+      max-width: 180px;
+      width: 100%;
+      height: 40px;
+      border-radius: 2px;
+      box-shadow: 2px 2px 4px rgba($black, 0.4);
+      background-color: $white;
+      &:hover {
+        &:before {
+          transform: translateX(-8px);
+        }
+        i {
+          opacity: 1;
+          // transform: translateX(-50%) translateX(0px);
+          // animation: rightSlide 1s ease-in-out infinite alternate;
+          // animation: horizontalShake 0.4s 400ms ease-in-out infinite alternate;
+        }
+      }
+      &:before {
+        content: '檢視更多';
+        display: block;
+        font-family: 'Open Huninn';
+        font-weight: 600;
+        margin: auto;
+        transition: .3s;
+      }
+      i {
+        position: absolute;
+        opacity: 0;
+        font-size: 24px;
+        left: calc(50% + 40px);
+        top: calc(50% - 1px);
+        animation: horizontalShake 0.4s ease-in-out infinite alternate;
+        transition: .3s;
+      }
+    }
+  }
 }

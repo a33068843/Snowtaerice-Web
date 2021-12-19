@@ -1,0 +1,80 @@
+extends ../base/_base.pug
+
+block append variables
+  - var activePage = "作品集"
+
+block append css
+  //- link(href="../css/home.css", rel="stylesheet")
+
+block append js
+  //- script(src="../js/home.js" type="text/javascript")
+
+block content
+  .content.inspirationPage
+    section.inspiration
+      .inspiration_container
+        .inspiration_Wrapper
+          .subtitle Inspiration
+          .title UI / UX
+          .divideWrapper
+            .shortLine
+            i.fas.fa-chevron-down
+            .shortLine
+          .text 不知道該打些甚麼好，總而言之這裡是放一些成品的地方 OuO。
+          //- .buttonWrapper
+          //-   a.button.github
+          //-     .button_front
+          //-       i.fab.fa-github
+          //-     .button_back Github
+          //-   a.button.github
+          //-     .button_front
+          //-       i.fab.fa-github
+          //-     .button_back Github
+            //- .button
+            //-   .button_back 不知道要放什麼OuO
+        //- .portfolio_rightWrapper 131313133
+    section.listCards
+      .listCards_hero
+        .circle1
+        .circle2
+      .listCards_container
+        .cards
+          a.card(href="./work01.html")
+            .card_topWrapper
+            .card_bottomWrapper
+              .rowWrapper
+                .dateWrapper
+                  .year 2021
+                  .month Dev
+                  .date 19
+                .categoryWrapper
+                  .category.blue Test Kit
+                  .category.red Ui Kit
+              .textTitle Hover Style
+              .textWrapper
+                .byAuthor
+                .author Snowaterice
+          a.card
+            .card_topWrapper
+            .card_bottomWrapper
+              .rowWrapper
+                .dateWrapper
+                  .year 2021
+                  .month Dev
+                  .date 32
+                .categoryWrapper
+                  .category Ui Kit
+              .textTitle Post Cards
+              .textWrapper
+                .byAuthor
+                .author Quan
+          //- a.card
+          //- a.card
+          //- a.card
+          //- a.card
+          //- a.card
+          //- a.card
+          //- a.card
+          //- a.card
+          //- a.card
+          //- a.card

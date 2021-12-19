@@ -1,0 +1,29 @@
+.inspirationPage {
+  .inspiration {
+    color: $primary-dark;
+    &_container {
+      padding: 80px 120px;
+      justify-content: center;
+    }
+    .subtitle,
+    .title,
+    .text {
+      text-align: center;
+    }
+
+    .subtitle {
+      left: 0;
+    }
+    .divideWrapper {
+      color: $primary-dark;
+      justify-content: center;
+      .shortLine {
+        border-bottom-color: $primary-dark;
+      }
+    }
+  }
+
+  .text {
+    font-weight: 600;
+  }
+}
